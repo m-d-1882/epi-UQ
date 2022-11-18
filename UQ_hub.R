@@ -61,7 +61,7 @@ pca1 = pca(Y = Y,W = diag(obs_err + model_disc))
 
 # plot the variance explained by each principal component
 plot(x = 1:length(pca1$VarExpl),y = pca1$VarExpl,type = 'p',
-     xlab = 'lambda',ylab = 'Prop. variance expl.')
+     xlab = 'lambda^2',ylab = 'Prop. variance expl.')
 
 # based off graph, choose number of principal components
 no.pcs = 7
