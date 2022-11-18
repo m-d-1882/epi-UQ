@@ -1,4 +1,4 @@
-# © Copyright University of Exeter. This code is open source and released under the MIT Licence
+# Â© Copyright University of Exeter. This code is open source and released under the MIT Licence
 
 # This script is the hub for Uncertainty Quantification (UQ) for this project.
 # We cover emulation and history matching for large outputs.
@@ -97,8 +97,11 @@ rotated.pca$VarExp
 # required. looking for lowest number of pcs that explain desired amount of 
 # variance.
 rotated.pca$recon_err
-# also look at number of pca's it takes to reconstruct the observation. set it 
-# to be the maximum of the 2
+# also look at the reconstruction error for each principal component added
+# (MSE).
+
+# set no.pcs in 'hmwave' to be the maximum of the choices for rotated.pca$VarExp
+# and rotated.pca$recon_err
 
 # History match: am using initial model runs as the inputs/outputs for this wave
 wave1 = hmwave(wave.no = 1,X = X,Y = Y,
